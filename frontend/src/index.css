@@ -39,9 +39,7 @@ p {
   outline: none;
 }
 
-.btn:hover,
-.btn:active,
-.btn:focus {
+.btn:hover {
   background: lightgrey;
   color: black;
 }
