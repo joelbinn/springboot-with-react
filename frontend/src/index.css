@@ -23,7 +23,34 @@ section {
 }
 
 /* LAYOUT */
+p {
+  margin-bottom: 1rem;
+}
 .container {
   max-width: 600px;
   margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+  background: lightgrey;
+  color: black;
+}
+.btn:active {
+  background: darkgrey;
+  color: black;
+}
+
+.btn-primary {
+  background-color: #6699ff;
+  color: #fff;
 }
