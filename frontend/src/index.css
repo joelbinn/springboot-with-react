@@ -43,6 +43,7 @@ p {
   background: lightgrey;
   color: black;
 }
+
 .btn:active {
   background: darkgrey;
   color: black;
