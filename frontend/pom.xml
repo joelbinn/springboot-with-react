@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-		<groupId>se.joelabs</groupId>
-		<artifactId>boot-with-react</artifactId>
+    <groupId>se.joelabs</groupId>
+    <artifactId>boot-with-react</artifactId>
     <version>1.0-SNAPSHOT</version>
-		<relativePath>../</relativePath>
-	</parent>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
 
   <artifactId>frontend</artifactId>
   <packaging>jar</packaging>
@@ -18,6 +18,10 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
+        <configuration>
+          <nodeVersion>v15.10.0</nodeVersion>
+          <yarnVersion>v1.22.4</yarnVersion>
+        </configuration>
         <executions>
           <execution>
             <id>install NodeJS and Yarn</id>

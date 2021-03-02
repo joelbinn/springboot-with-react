@@ -1,6 +1,5 @@
-import React from 'react';
-import {useState} from 'react';
-import './App.css';
+import React, {useState} from 'react';
+import './App.scss';
 
 function App() {
   async function doPing() {
@@ -8,9 +7,10 @@ function App() {
     const text = await response.text();
     console.log("text:", text);
     setPingResult(text)
-  };
+  }
 
-  const [pingResult, setPingResult] = useState<string|undefined>()
+  const [pingResult, setPingResult] = useState<string | undefined>()
+  const [sideBarOpen, setSideBarOpen] = useState(false)
 
   return (
     <div className="app">
@@ -21,12 +21,19 @@ function App() {
       </header>
       <section>
         <div className="container">
-          <p>
-            <button className="btn btn-primary" onClick={doPing}>Send ping to /api/v1/ping</button>
-          </p>
-          {pingResult && <p>Got response: <span className="highlight"><strong>{pingResult}</strong></span></p>}
+          <button className="btn btn-primary" onClick={doPing}>Send ping to /api/v1/ping</button>
+          {pingResult &&
+          <div className="card centered-card">
+            <p>Got response: <span className="highlight"><strong>{pingResult}</strong></span></p>
+          </div>
+          }
         </div>
       </section>
+      {sideBarOpen &&
+        <div className="sidebar">
+          kaka
+        </div>
+      }
     </div>
   );
 
